@@ -27,11 +27,11 @@
   --text-s: 16px;
   --text-xs: 14px;
 }
+
 body {
   margin: 0;
   line-height: 1.75rem;
-  background-color: var(--background-white);
-  /* background-image: linear-gradient(var(--indigo-5), var(--indigo-10)); */
+  background-image: linear-gradient(var(--indigo-5), var(--indigo-20));
 }
 img {
   width: 100%;

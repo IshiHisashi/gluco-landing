@@ -14,7 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald:wght@200..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
+    <script src="menu.js"></script>
   </head>
   <body>
     <header class="top-header">
@@ -28,6 +29,20 @@
             <li><a href="#team">Team</a></li>
           </ul>
         </div>
+
+        <button>View Proposal</button>
+      </div>
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        &#9776;
+        <!-- Hamburger Icon -->
+      </div>
+      <div class="hamburger-menu" id="hamburgerMenu">
+        <div class="close-icon" onclick="toggleMenu()">&times;</div>
+        <!-- Close Icon -->
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#team">Team</a></li>
+        </ul>
         <button>View Proposal</button>
       </div>
     </header>
@@ -47,16 +62,16 @@
             </ul>
           </div>
         </div>
-        <div class="image-right">
+        <div class="image-right hidden">
           <img src="images/Hero-header-image.png" alt="mobile-app" />
         </div>
       </div>
 
-      <section class="features-section">
+      <section class="features-section" id="features">
         <!-- Feature 1: Automated Logging -->
         <div class="auto-log">
           <!-- Image Section -->
-          <div class="left-image-container1">
+          <div class="left-image-container-yellow hidden">
             <img
               src="images/mockup-log.png"
               alt="Automated Logging Feature Image"
@@ -64,7 +79,7 @@
           </div>
 
           <!-- Text Section -->
-          <div class="right-text-column">
+          <div class="right-text-column1 hidden">
             <!-- Category Label -->
             <div class="category-yellow">
               <img
@@ -109,7 +124,7 @@
         </div>
 
         <!-- Feature 2: Gamification -->
-        <div class="gamification">
+        <div class="gamification hidden">
           <!-- Text Section -->
           <div class="left-text-column">
             <!-- Category Label -->
@@ -157,17 +172,17 @@
         </div>
 
         <!-- Feature 3: Personalized Insights -->
-        <div class="insights">
+        <div class="insights hidden">
           <!-- Image Section -->
           <div class="left-image-container">
             <img
-              src="images/insight-screen.png"
+              src="images/insights.png"
               alt="Personalized Insights Feature Image"
             />
           </div>
 
           <!-- Text Section -->
-          <div class="right-text-column">
+          <div class="right-text-column-orange">
             <!-- Category Label -->
             <div class="category-orange">
               <img
@@ -210,7 +225,7 @@
         </div>
       </section>
 
-      <section class="team-section">
+      <section class="team-section" id="team">
         <div class="section-title">
           <h2>Meet Our Team</h2>
         </div>
@@ -221,8 +236,12 @@
             <h3>Jennifer Mallari</h3>
             <p>PM & UX/UI Designer</p>
             <div class="links">
-              <i class="fa-brands fa-linkedin-in"></i>
-              <i class="fa-solid fa-globe"></i>
+              <a href="https://www.linkedin.com/in/jennifergmallari"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="https://jennifergmallari.ca/"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
             </div>
           </div>
 
@@ -231,8 +250,12 @@
             <h3>Kathreen Nervez</h3>
             <p>Lead UX/UI Designer</p>
             <div class="links">
-              <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href=""><i class="fa-solid fa-globe"></i></a>
+              <a href="https://www.linkedin.com/in/kat-nervez/"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="https://www.katnervez.ca/"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
             </div>
           </div>
 
@@ -241,8 +264,12 @@
             <h3>Hazel Lao</h3>
             <p>UX/UI Designer</p>
             <div class="links">
-              <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href=""><i class="fa-solid fa-globe"></i></a>
+              <a href="https://www.linkedin.com/in/hazellao/"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="https://www.hazellao.design/"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
             </div>
           </div>
 
@@ -251,8 +278,12 @@
             <h3>Eliza Francisco</h3>
             <p>UX/UI Designer</p>
             <div class="links">
-              <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href=""><i class="fa-solid fa-globe"></i></a>
+              <a href="https://www.linkedin.com/in/elizafrancisco"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="https://elizafrancisco.com/"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
             </div>
           </div>
 
@@ -261,8 +292,12 @@
             <h3>Hisashi Ishihara</h3>
             <p>Dev Lead & Full-stack Developer</p>
             <div class="links">
-              <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href=""><i class="fa-solid fa-globe"></i></a>
+              <a href="https://www.linkedin.com/in/ishi-hisashi/"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="https://github.com/IshiHisashi"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
             </div>
           </div>
           <div class="member-info">
@@ -270,8 +305,12 @@
             <h3>Sachi Asano</h3>
             <p>Full-stack Developer</p>
             <div class="links">
-              <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href=""><i class="fa-solid fa-globe"></i></a>
+              <a href="https://www.linkedin.com/in/sachi-sacha-asano/"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="https://github.com/c-est-sa"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
             </div>
           </div>
 
@@ -280,8 +319,12 @@
             <h3>Prathibha Wejitunga</h3>
             <p>Full-stack Developer</p>
             <div class="links">
-              <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href=""><i class="fa-solid fa-globe"></i></a>
+              <a href="https://www.linkedin.com/in/shehani-wijetunga"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="https://github.com/shehani-wijetunga"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
             </div>
           </div>
 
@@ -290,8 +333,12 @@
             <h3>Akifumi Hayashi</h3>
             <p>Full-stack Developer</p>
             <div class="links">
-              <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
-              <a href=""><i class="fa-solid fa-globe"></i></a>
+              <a href="https://www.linkedin.com/in/akifumi-hayashi"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="https://github.com/Akiodesukedo"
+                ><i class="fa-solid fa-globe"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -299,8 +346,7 @@
 
       <section class="contact-section">
         <h2>Ready to get started?</h2>
-        <p>Our team is here to help you take the first step.</p>
-        <button>Contact Us</button>
+        <button>View Proposal</button>
       </section>
     </main>
 
