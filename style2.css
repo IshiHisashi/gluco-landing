@@ -800,7 +800,7 @@ footer {
     gap: 4rem;
     max-width: 60vw;
   }
-
+}
   @media screen and (max-width: 768px) {
     /* Hamburger Menu */
     .hamburger-menu {
@@ -916,4 +916,4 @@ footer {
     opacity: 1;
     transform: translateY(0); /* Move to original position */
   }
-}
+
