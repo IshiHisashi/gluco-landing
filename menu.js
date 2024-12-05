@@ -3,27 +3,36 @@ function toggleMenu() {
   menu.classList.toggle("show"); // Toggle the menu visibility
 }
 
-// Close menu and navigate to the section
 function closeMenuAndNavigate(e) {
-  e.preventDefault(); // Prevent default anchor behavior
+    const menu = document.getElementById("hamburgerMenu");
 
-  const menu = document.getElementById("hamburgerMenu");
-  menu.classList.remove("show"); // Close the menu
+    // Handle download links
+    if (e.target.closest("a[download]")) {
+        menu.classList.remove("show"); // Close the menu
+        // Let the browser handle the download normally
+        return;
+    }
 
-  const target = e.target.getAttribute("href"); // Get the href value
-  const section = document.querySelector(target); // Find the target section
+    // Prevent default for normal links
+    e.preventDefault();
 
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the section
-  }
+    // Close the menu for normal links
+    menu.classList.remove("show");
+
+    // Smooth scroll to the section
+    const target = e.target.getAttribute("href");
+    const section = document.querySelector(target);
+    if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+    }
 }
 
 // Add event listeners to links
 document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll(".hamburger-menu a"); // Select all links in the menu
-  links.forEach((link) => {
-    link.addEventListener("click", closeMenuAndNavigate);
-  });
+    const links = document.querySelectorAll(".hamburger-menu a"); // Select all links in the menu
+    links.forEach((link) => {
+        link.addEventListener("click", closeMenuAndNavigate);
+    });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
