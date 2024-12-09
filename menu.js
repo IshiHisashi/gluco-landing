@@ -7,7 +7,7 @@ function closeMenuAndNavigate(e) {
     const menu = document.getElementById("hamburgerMenu");
 
     // Handle download links
-    if (e.target.closest("a[download]")) {
+    if (e.target.closest("a[_blank]")) {
         menu.classList.remove("show"); // Close the menu
         // Let the browser handle the download normally
         return;
